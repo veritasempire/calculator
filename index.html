@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calc / History / Notes</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- CALCULATOR -->
+    <section class="calculator" aria-label="Calculator">
+      <div class="calc-header">
+        <span class="dot dot--1"></span>
+        <span class="dot dot--2"></span>
+        <span class="dot dot--3"></span>
+      </div>
+
+      <div class="display" id="display">
+        <div class="display__expression" id="expression" aria-live="polite"></div>
+        <div class="display__result" id="result">0</div>
+      </div>
+
+      <div class="keypad" id="keypad">
+        <button class="key key--func" data-action="clear">C</button>
+        <button class="key key--func" data-action="delete">⌫</button>
+        <button class="key key--func" data-action="percent">%</button>
+        <button class="key key--op" data-value="÷">÷</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key key--op" data-value="×">×</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key key--op" data-value="−">−</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key key--op" data-value="+">+</button>
+
+        <button class="key key--wide" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key key--equals" data-action="equals">=</button>
+      </div>
+    </section>
+
+    <!-- SIDE PANEL -->
+    <section class="panel" aria-label="History and Notes">
+      <div class="panel__tabs" role="tablist">
+        <button class="tab tab--active" data-tab="history" role="tab" aria-selected="true">History</button>
+        <button class="tab" data-tab="notes" role="tab" aria-selected="false">Notes</button>
+      </div>
+
+      <!-- HISTORY TAB -->
+      <div class="tab-content tab-content--active" data-content="history">
+        <div class="panel__head">
+          <h2>Recent calculations</h2>
+          <button class="ghost-btn" id="clearHistoryBtn">Clear history</button>
+        </div>
+        <ul class="history-list" id="historyList">
+          <li class="empty-state" id="historyEmpty">No calculations yet — try 12 + 8</li>
+        </ul>
+      </div>
+
+      <!-- NOTES TAB -->
+      <div class="tab-content" data-content="notes">
+        <div class="panel__head">
+          <h2>Scratchpad</h2>
+          <button class="ghost-btn" id="clearNotesBtn">Clear notes</button>
+        </div>
+        <textarea
+          class="notes-area"
+          id="notesArea"
+          placeholder="Jot down formulas, reminders, or numbers to revisit later..."
+          spellcheck="false"
+        ></textarea>
+        <div class="notes-meta" id="notesMeta">Not saved yet</div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
