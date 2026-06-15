@@ -1,8 +1,6 @@
 # 🧮 Glassmorphism Calculator UI
 A modern calculator interface built with a clean glassmorphism-inspired design. The project features a minimal calculator layout with a history panel, soft shadows, rounded corners, and a dark green aesthetic.
 
-![Calculator UI Preview](./preview.png)
-
 ## ✨ Features
 - Clean and modern UI
 - Glassmorphism-inspired history panel
